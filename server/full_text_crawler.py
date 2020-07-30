@@ -44,8 +44,8 @@ def craw_data(out_file, target_file=None, target=None):
             print('error')
             error += 1
         
-        # if i >= 100:
-        #     break
+        if i >= 200:
+            break
 
     if not os.path.isfile(out_file) and len(data) > 0:
         with open(out_file, "w", encoding='utf-8') as outfile:

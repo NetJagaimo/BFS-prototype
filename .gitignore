@@ -3,6 +3,7 @@ venv
 files
 data.json
 data
+data.*
 *.0
 *.index
 *.lsi
@@ -13,3 +14,4 @@ full_text.csv
 __pycache__
 logs.txt
 *.npy
+.DS_Store

@@ -7,7 +7,7 @@ import gensim
 import datetime
 
 cc = OpenCC('s2tw')
-ws = WS("./data")
+ws = WS("data")
 
 chi_stopWords=[]
 with open('stopWords.txt', 'r', encoding='UTF-8') as file:
