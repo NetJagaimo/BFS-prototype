@@ -20,17 +20,6 @@ virtualenv venv
 pip install -r requirements.txt
 ```
 
-## 下載 ckip model
-1. 開一個文件，輸入以下程式碼
-```
-# -*- coding: utf-8 -*-
-from ckiptagger import data_utils
-data_utils.download_data_gdown("./")
-```
-2. 存擋為ckip_download.py
-3. 執行python ckip_download.py
-4. 將下載下來的data.zip解壓縮到server資料夾裡面
-
 ## 啟動後端程式
 ```
 cd server
