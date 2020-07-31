@@ -2,23 +2,25 @@
 
 # 安裝教學
 
-### 安裝python (windows才需要)
+## 先下載這份原始碼
+
+## 安裝python (windows才需要)
 至 https://www.python.org/ 下載python安裝檔
 安裝時記得把設為環境變數打勾
 
-### 安裝python套件
-#### 創建並啟動virtualenv
+## 安裝python套件
+### 創建並啟動virtualenv
 ```
 pip install virtualenv
 virtualenv venv
 .\venv\Scripts\activate
 ```
-#### 安裝所需套件
+### 安裝所需套件
 ```
 pip install -r requirements.txt
 ```
 
-### 下載 ckip model
+## 下載 ckip model
 1. 開一個文件，輸入以下程式碼
 ```
 # -*- coding: utf-8 -*-
@@ -35,7 +37,7 @@ cd server
 python bfs.py
 ```
 
-### 載入Chrome擴充套件
+## 載入Chrome擴充套件
 * 設定->擴充套件->將開發人員模式打開
 * 載入未封裝項目->選擇bfs資料夾->完成
 * 載入後會自動將書籤資料傳給後端程式進行資料爬取以及LSI模型建立，請等他完成
