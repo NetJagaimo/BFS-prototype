@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 import csv
-from ckiptagger import WS
+import jieba
 from opencc import OpenCC
 import re
 import gensim
 import datetime
 
 cc = OpenCC('s2tw')
-ws = WS("data")
+jieba.load_userdict('data/jieba/dict.txt.big')
 
 chi_stopWords=[]
 with open('stopWords.txt', 'r', encoding='UTF-8') as file:
@@ -20,7 +20,7 @@ def preprocess(text):
         chi_tokens = []
         chi_text = "".join(re.compile(r'[\u4e00-\u9fa5]').findall(text))
         if len(chi_text) > 0:
-            chi_text_seg = ws([chi_text])[0]
+            chi_text_seg = jieba.cut(text)
             chi_tokens = list(filter(lambda a: a not in chi_stopWords, chi_text_seg))
         eng_tokens = []
         eng_text = " ".join(re.compile(r'[\u0061-\u007a]+').findall(text.lower()))
